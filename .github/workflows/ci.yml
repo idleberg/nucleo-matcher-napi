@@ -65,7 +65,10 @@ jobs:
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: bindings-${{ matrix.settings.target }}
-          path: ${{ env.APP_NAME }}.*.node
+          path: |
+            ${{ env.APP_NAME }}.*.node
+            index.js
+            index.d.ts
           if-no-files-found: error
   test:
     name: test - node ${{ matrix.node }} - ${{ matrix.os }}
