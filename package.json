@@ -49,13 +49,13 @@
     "vitest": "^4.1.10"
   },
   "optionalDependencies": {
-    "nucleo-matcher-napi-darwin-arm64": "0.1.0",
-    "nucleo-matcher-napi-darwin-x64": "0.1.0",
-    "nucleo-matcher-napi-linux-arm64-gnu": "0.1.0",
-    "nucleo-matcher-napi-linux-x64-gnu": "0.1.0",
-    "nucleo-matcher-napi-linux-x64-musl": "0.1.0",
-    "nucleo-matcher-napi-win32-arm64-msvc": "0.1.0",
-    "nucleo-matcher-napi-win32-x64-msvc": "0.1.0"
+    "nucleo-matcher-napi-darwin-arm64": "workspace:*",
+    "nucleo-matcher-napi-darwin-x64": "workspace:*",
+    "nucleo-matcher-napi-linux-arm64-gnu": "workspace:*",
+    "nucleo-matcher-napi-linux-x64-gnu": "workspace:*",
+    "nucleo-matcher-napi-linux-x64-musl": "workspace:*",
+    "nucleo-matcher-napi-win32-arm64-msvc": "workspace:*",
+    "nucleo-matcher-napi-win32-x64-msvc": "workspace:*"
   },
   "napi": {
     "binaryName": "nucleo-matcher-napi",
