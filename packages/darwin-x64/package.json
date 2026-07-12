@@ -1,0 +1,21 @@
+{
+  "name": "nucleo-matcher-napi-darwin-x64",
+  "version": "0.1.0",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "nucleo-matcher-napi.darwin-x64.node",
+  "files": [
+    "nucleo-matcher-napi.darwin-x64.node"
+  ],
+  "description": "Fast fuzzy matcher for Node and Electron, powered by nucleo-matcher",
+  "keywords": [],
+  "author": "",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=16"
+  }
+}

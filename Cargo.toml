@@ -1,0 +1,25 @@
+
+[package]
+name = "nucleo_matcher_napi"
+version = "0.0.0"
+edition = "2021"
+license = "MPL-2.0"
+description = "N-API bindings for nucleo-matcher"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "3", default-features = false, features = ["napi6"] }
+napi-derive = "3"
+nucleo-matcher = "0.3.1"
+
+[build-dependencies]
+napi-build = "2.3"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

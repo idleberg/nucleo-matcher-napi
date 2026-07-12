@@ -1,0 +1,19 @@
+# build artifacts
+*.node
+/target/
+/index.js
+/index.d.ts
+
+# benchmark
+benchmark/.corpus.txt
+benchmark/.linux.git/
+benchmark/node_modules/
+
+# package manager
+node_modules/
+package-lock.json
+yarn.lock
+bun.lock
+
+# OS
+.DS_Store

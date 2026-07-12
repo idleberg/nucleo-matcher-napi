@@ -1,0 +1,39 @@
+[tools]
+node = "24"
+lefthook = { version = "latest", postinstall = "lefthook install" }
+
+[tasks.build]
+description = "Build native module"
+run = "napi build --platform --release"
+
+[tasks."build:debug"]
+description = "Build native module (debug)"
+run = "napi build --platform"
+
+[tasks.checks]
+description = "Run all checks (formatting, linting)"
+depends = ["format:check", "lint:check", "test"]
+
+[tasks.fix]
+description = "Run all checks (formatting, linting)"
+depends = ["format", "lint"]
+
+[tasks."lint:check"]
+description = "Lint Rust code with Clippy"
+run = "cargo clippy -- --deny warnings"
+
+[tasks.lint]
+description = "Fix linting issues with Clippy"
+run = "cargo clippy --fix --allow-dirty --allow-staged"
+
+[tasks.format]
+description = "Format Rust code"
+run = "cargo fmt"
+
+[tasks."format:check"]
+description = "Check Rust code formatting"
+run = "cargo fmt --check"
+
+[tasks.test]
+description = "Run all tests"
+run = "cargo test"

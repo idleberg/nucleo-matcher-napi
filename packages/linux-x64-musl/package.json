@@ -1,0 +1,24 @@
+{
+  "name": "nucleo-matcher-napi-linux-x64-musl",
+  "version": "0.1.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "nucleo-matcher-napi.linux-x64-musl.node",
+  "files": [
+    "nucleo-matcher-napi.linux-x64-musl.node"
+  ],
+  "description": "Fast fuzzy matcher for Node and Electron, powered by nucleo-matcher",
+  "keywords": [],
+  "author": "",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=16"
+  },
+  "libc": [
+    "musl"
+  ]
+}

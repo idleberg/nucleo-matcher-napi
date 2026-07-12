@@ -1,0 +1,4 @@
+[toolchain]
+# Pin so the wasm/native comparison in the README is reproducible.
+channel = "1.90.0"
+components = ["rustfmt", "clippy"]

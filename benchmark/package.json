@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "devDependencies": {
+    "console-table-printer": "^2.16.1",
+    "nucleo-matcher-wasm": "^0.4.1",
+    "zadeh": "^3.0.0-beta.4"
+  }
+}

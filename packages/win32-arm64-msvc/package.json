@@ -1,0 +1,21 @@
+{
+  "name": "nucleo-matcher-napi-win32-arm64-msvc",
+  "version": "0.1.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "nucleo-matcher-napi.win32-arm64-msvc.node",
+  "files": [
+    "nucleo-matcher-napi.win32-arm64-msvc.node"
+  ],
+  "description": "Fast fuzzy matcher for Node and Electron, powered by nucleo-matcher",
+  "keywords": [],
+  "author": "",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=16"
+  }
+}
