@@ -1,6 +1,6 @@
 {
   "name": "nucleo-matcher-napi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Fast fuzzy matcher for Node and Electron, powered by nucleo-matcher",
   "keywords": [
     "electron",
