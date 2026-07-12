@@ -1,6 +1,6 @@
 {
   "name": "nucleo-matcher-napi",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Fast fuzzy matcher for Node and Electron, powered by nucleo-matcher",
   "keywords": [
     "electron",
@@ -35,7 +35,7 @@
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
     "artifacts": "napi artifacts --npm-dir packages",
-    "prepublishOnly": "napi prepublish --npm-dir packages -t npm",
+    "prepublishOnly": "napi prepublish --npm-dir packages -t npm --no-gh-release",
     "version": "napi version --npm-dir packages",
     "test": "vitest run",
     "test:electron": "electron scripts/electron-smoke.cjs",
