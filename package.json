@@ -2,6 +2,35 @@
   "name": "nucleo-matcher-napi",
   "version": "0.1.0",
   "description": "Fast fuzzy matcher for Node and Electron, powered by nucleo-matcher",
+  "keywords": [
+    "electron",
+    "fuzzy",
+    "fuzzy-finder",
+    "fuzzy-search",
+    "fzf",
+    "napi",
+    "nucleo"
+  ],
+  "license": "MPL-2.0",
+  "author": "Jan T. Sott",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idleberg/nucleo-napi.git"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
   "scripts": {
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
@@ -9,34 +38,27 @@
     "prepublishOnly": "napi prepublish --npm-dir packages -t npm",
     "version": "napi version --npm-dir packages",
     "test": "vitest run",
+    "test:electron": "electron scripts/electron-smoke.cjs",
     "bench": "node benchmark/index.mjs"
   },
-  "keywords": [
-    "fuzzy",
-    "fuzzy-search",
-    "fuzzy-finder",
-    "fzf",
-    "nucleo",
-    "napi",
-    "electron"
-  ],
-  "author": "Jan T. Sott",
-  "license": "MPL-2.0",
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "@napi-rs/cli": "^3.7.2",
     "@types/node": "^26.1.1",
+    "electron": "^43.1.0",
     "typescript": "^7.0.2",
     "vite": "^8.1.4",
     "vitest": "^4.1.10"
   },
-  "types": "index.d.ts",
-  "files": [
-    "index.js",
-    "index.d.ts",
-    "README.md",
-    "LICENSE"
-  ],
+  "optionalDependencies": {
+    "nucleo-matcher-napi-darwin-arm64": "workspace:*",
+    "nucleo-matcher-napi-darwin-x64": "workspace:*",
+    "nucleo-matcher-napi-linux-arm64-gnu": "workspace:*",
+    "nucleo-matcher-napi-linux-x64-gnu": "workspace:*",
+    "nucleo-matcher-napi-linux-x64-musl": "workspace:*",
+    "nucleo-matcher-napi-win32-arm64-msvc": "workspace:*",
+    "nucleo-matcher-napi-win32-x64-msvc": "workspace:*"
+  },
   "napi": {
     "binaryName": "nucleo-matcher-napi",
     "targets": [
@@ -50,27 +72,7 @@
     ]
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
-  "main": "index.js",
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idleberg/nucleo-napi.git"
-  },
-  "packageManager": "pnpm@11.11.0+sha512.4463f65fd80ed80d69bc1d4bf163ee94f605c7380fc318bb5b2ebe15f8cd12d49c51a4d59e951b401e764d3b6ca751cbf51bc50ed7001a6bcb4935e684c34882",
-  "optionalDependencies": {
-    "nucleo-matcher-napi-darwin-arm64": "0.1.0",
-    "nucleo-matcher-napi-darwin-x64": "0.1.0",
-    "nucleo-matcher-napi-linux-arm64-gnu": "0.1.0",
-    "nucleo-matcher-napi-linux-x64-gnu": "0.1.0",
-    "nucleo-matcher-napi-linux-x64-musl": "0.1.0",
-    "nucleo-matcher-napi-win32-arm64-msvc": "0.1.0",
-    "nucleo-matcher-napi-win32-x64-msvc": "0.1.0"
-  }
+  "packageManager": "pnpm@11.11.0+sha512.4463f65fd80ed80d69bc1d4bf163ee94f605c7380fc318bb5b2ebe15f8cd12d49c51a4d59e951b401e764d3b6ca751cbf51bc50ed7001a6bcb4935e684c34882"
 }
