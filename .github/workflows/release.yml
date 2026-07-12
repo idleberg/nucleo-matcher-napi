@@ -55,10 +55,11 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
         if: ${{ !matrix.settings.docker }}
-        with:
-          targets: ${{ matrix.settings.target }}
+      - name: Install Rust target
+        if: ${{ !matrix.settings.docker }}
+        run: rustup target add ${{ matrix.settings.target }}
       - uses: goto-bus-stop/setup-zig@abea47f85e598557f500fa1fd2ab7464fcb39406 # v2.2.1
         if: ${{ contains(matrix.settings.target, 'musl') }}
       - run: pnpm install --frozen-lockfile
