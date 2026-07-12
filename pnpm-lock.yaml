@@ -26,6 +26,28 @@ importers:
       vitest:
         specifier: ^4.1.10
         version: 4.1.10(@types/node@26.1.1)(vite@8.1.4(@types/node@26.1.1))
+    optionalDependencies:
+      nucleo-matcher-napi-darwin-arm64:
+        specifier: workspace:*
+        version: link:packages/darwin-arm64
+      nucleo-matcher-napi-darwin-x64:
+        specifier: workspace:*
+        version: link:packages/darwin-x64
+      nucleo-matcher-napi-linux-arm64-gnu:
+        specifier: workspace:*
+        version: link:packages/linux-arm64-gnu
+      nucleo-matcher-napi-linux-x64-gnu:
+        specifier: workspace:*
+        version: link:packages/linux-x64-gnu
+      nucleo-matcher-napi-linux-x64-musl:
+        specifier: workspace:*
+        version: link:packages/linux-x64-musl
+      nucleo-matcher-napi-win32-arm64-msvc:
+        specifier: workspace:*
+        version: link:packages/win32-arm64-msvc
+      nucleo-matcher-napi-win32-x64-msvc:
+        specifier: workspace:*
+        version: link:packages/win32-x64-msvc
 
   benchmark:
     devDependencies:
