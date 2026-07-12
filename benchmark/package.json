@@ -1,5 +1,4 @@
 {
-{
   "name": "nucleo-matcher-napi-benchmarks",
   "private": true,
   "devDependencies": {
