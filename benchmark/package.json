@@ -1,4 +1,6 @@
 {
+{
+  "name": "nucleo-matcher-napi-benchmarks",
   "private": true,
   "devDependencies": {
     "console-table-printer": "^2.16.1",
