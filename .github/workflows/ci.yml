@@ -53,6 +53,10 @@ jobs:
       - name: Install Rust target
         run: rustup target add ${{ matrix.settings.target }}
 
+      - uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4 # v2.9.1
+        with:
+          key: ${{ matrix.settings.target }}
+
       - uses: goto-bus-stop/setup-zig@abea47f85e598557f500fa1fd2ab7464fcb39406 # v2.2.1
         if: ${{ contains(matrix.settings.target, 'linux') }}
 
