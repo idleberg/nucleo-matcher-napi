@@ -122,5 +122,4 @@ jobs:
           name: bindings-x86_64-unknown-linux-gnu
           path: .
 
-      - run: pnpm add -D electron@latest
       - run: xvfb-run --auto-servernum npx electron scripts/electron-smoke.cjs

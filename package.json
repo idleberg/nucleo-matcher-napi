@@ -38,12 +38,14 @@
     "prepublishOnly": "napi prepublish --npm-dir packages -t npm",
     "version": "napi version --npm-dir packages",
     "test": "vitest run",
+    "test:electron": "electron scripts/electron-smoke.cjs",
     "bench": "node benchmark/index.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "@napi-rs/cli": "^3.7.2",
     "@types/node": "^26.1.1",
+    "electron": "^43.1.0",
     "typescript": "^7.0.2",
     "vite": "^8.1.4",
     "vitest": "^4.1.10"
